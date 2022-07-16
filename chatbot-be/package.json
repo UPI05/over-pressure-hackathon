@@ -1,0 +1,32 @@
+{
+  "name": "chatbot-be",
+  "version": "1.0.0",
+  "description": "M4TRiX Chat bot BE",
+  "main": "server.js",
+  "lint-staged": {
+    "*.{js}": "prettier --config .prettierrc.json server.js \"src/**/*.js\" --write"
+  },
+  "scripts": {
+    "lint": "lint-staged --allow-empty",
+    "husky-prepare": "husky install",
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "pret": "prettier --config .prettierrc.json server.js \"src/**/*.js\" --write"
+  },
+  "author": "M4TRiX",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.17.2",
+    "husky": "^7.0.4",
+    "jsonwebtoken": "^8.5.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "lint-staged": "^12.2.0",
+    "nodemon": "^2.0.19",
+    "prettier": "^2.5.1"
+  }
+}
